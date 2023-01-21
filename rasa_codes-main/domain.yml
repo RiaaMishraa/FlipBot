@@ -1,0 +1,375 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- feedback_findprod_yes:
+    use_entities: true
+- voltage_start:
+    use_entities: true
+- choose_feedback:
+    use_entities: true
+- feedback_findprod_no:
+    use_entities: true
+- feedback_whichprod:
+    use_entities: true
+- feedback_pri:
+    use_entities: true
+- feedback_impfeat:
+    use_entities: true
+- feedback_exp:
+    use_entities: true
+- feedback_recommendation:
+    use_entities: true
+- feedback_back:
+    use_entities: true
+- feedback_rating:
+    use_entities: true
+- credit_start_yes:
+    use_entities: true
+- credit_start_no:
+    use_entities: true
+- credit_try_yes:
+    use_entities: true
+- credit_try_no:
+    use_entities: true
+- credit_thanks:
+    use_entities: true
+- credit_the_end:
+    use_entities: true
+- credit_use_yes:
+    use_entities: true
+- credit_use_no:
+    use_entities: true
+- credit_prioritycustomer_answer_yes:
+    use_entities: true
+- credit_prioritycustomer_answer_no:
+    use_entities: true
+- credit_expenditure:
+    use_entities: true
+- credit_apply_yes:
+    use_entities: true
+- credit_apply_no:
+    use_entities: true
+- credit_house:
+    use_entities: true
+- credit_knowmore_yes:
+    use_entities: true
+- credit_knowmore_no:
+    use_entities: true
+- choose_credit:
+    use_entities: true
+- issue_delay_pick:
+    use_entities: true
+- issue_money_pick:
+    use_entities: true
+- issue_package_pick:
+    use_entities: true
+- issue_item_pick:
+    use_entities: true
+- issue_delay_number:
+    use_entities: true
+- issue_money_number:
+    use_entities: true
+- issue_package_number:
+    use_entities: true
+- issue_item_number:
+    use_entities: true
+- issue_package_desc:
+    use_entities: true
+- issue_item_desc:
+    use_entities: true
+- issue_response:
+    use_entities: true
+- issue_any_yes:
+    use_entities: true
+- issue_any_no:
+    use_entities: true
+- issue_damage_yes:
+    use_entities: true
+- issue_damage_no:
+    use_entities: true
+- issue_replace_yes:
+    use_entities: true
+- issue_replace_no:
+    use_entities: true
+- choose_issue:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- dues_notpaid:
+    use_entities: true
+- dues_inside_three:
+    use_entities: true
+- dues_outside_three:
+    use_entities: true
+- dues_three_sure:
+    use_entities: true
+- dues_more_sure:
+    use_entities: true
+- dues_reason_forgot:
+    use_entities: true
+- dues_reason_finance:
+    use_entities: true
+- dues_finance:
+    use_entities: true
+- dues_forget:
+    use_entities: true
+- choose_dues:
+    use_entities: true
+entities: []
+slots: {}
+responses:
+  utter_choose_case:
+  - buttons:
+    - payload: /choose_credit
+      title: A voice bot conversing with a customer to sell a credit card
+    - payload: /choose_feedback
+      title: The voice bot conversing with a customer to gather user feedback on a specific topic
+    - payload: /choose_issue
+      title: A voice bot conversing with a customer to address a specific issue related to an ecommerce order
+    - payload: /choose_dues
+      title: The voice bot conversing with a customer to check why the customer has not paid his credit card dues, and suggest suitable follow-up options
+    text: Please choose a case to start interacting with FlipBot
+  utter_feedback_please:
+  - text: Please answer the following questions to provide your valuable feedback
+  utter_feedback_find:
+  - buttons:
+    - payload: /feedback_findprod_yes
+      title: Yes
+    - payload: /feedback_findprod_no
+      title: No
+    text: Were you able to find your desired product on the site?
+  utter_feedback_whichproduct:
+  - text: What was the product?
+  utter_feedback_price:
+  - buttons:
+    - payload: /feedback_pri
+      title: Yes
+    - payload: /feedback_pri
+      title: No
+    text: Were the prices reasonable?
+  utter_feedback_impfeature:
+  - text: Which feature of the app are most/least important to you?
+  utter_feedback_experience:
+  - text: How would you rate your experience with us? (Rate from 1 to 5)
+  utter_feedback_recommend:
+  - buttons:
+    - payload: /feedback_recommendation
+      title: Most likely
+    - payload: /feedback_recommendation
+      title: Likely
+    - payload: /feedback_recommendation
+      title: Not likely
+    text: How likely are you to recommend Flipkart to a friend?
+  utter_feedback_comeback:
+  - buttons:
+    - payload: /feedback_back
+      title: For sure
+    - payload: /feedback_back
+      title: Maybe
+    - payload: /feedback_back
+      title: It was a mistake
+    text: How likely are you to come back on this website?
+  utter_feedback_rate:
+  - buttons:
+    - payload: /feedback_rating
+      title: Ya sure
+    - payload: /feedback_rating
+      title: No I do not want to
+    text: If you like flipkart, we would greatly appreciate it if you could rate the app on the App/Play Store.
+  utter_feedback_end:
+  - text: Thank you for your time
+  utter_credit_intro:
+  - buttons:
+    - payload: /credit_start_yes
+      title: Yes
+    - payload: /credit_start_no
+      title: No
+    text: I am FlipBot from FlipBank. Are you a FlipBank credit cardholder?
+  utter_credit_tryout:
+  - buttons:
+    - payload: /credit_try_yes
+      title: Yes
+    - payload: /credit_try_no
+      title: No
+    text: Would you like to try out our newly launched lifestyle credit card?
+  utter_credit_thankyou:
+  - text: No issues. Thank you for your time
+  utter_credit_end:
+  - text: Okay. Thank you for being a part of FlipBank.
+  utter_credit_used:
+  - buttons:
+    - payload: /credit_use_yes
+      title: Yes
+    - payload: /credit_use_no
+      title: No
+    text: Have you ever used a FlipBank lifestyle credit card?
+  utter_credit_priority:
+  - buttons:
+    - payload: /credit_prioritycustomer_answer_yes
+      title: Yes
+    - payload: /credit_prioritycustomer_answer_no
+      title: No
+    text: Are you a priority customer of our bank?
+  utter_credit_priority_yes:
+  - text: If you’re looking for a credit card that provides whole lot of benefits covering major areas of your life, then you should ideally go for a lifestyle credit card. There is no joining fee for you and with interest rate of just 2.2% per month.
+  utter_credit_priority_no:
+  - text: If you’re looking for a credit card that provides whole lot of benefits covering major areas of your life, then you should ideally go for a lifestyle credit card. The joining fee is just Rs 200 and with low interest rate of 2.5% per month.
+  utter_credit_expend:
+  - buttons:
+    - payload: /credit_expenditure
+      title: Rs 1000 - 4000
+    - payload: /credit_expenditure
+      title: Rs 4000 - 5000
+    - payload: /credit_expenditure
+      title: Above Rs 5000
+    text: What is your monthly expenditure on fuel/travel/dining ?
+  utter_credit_know_more:
+  - buttons:
+    - payload: /credit_knowmore_yes
+      title: Yes
+    - payload: /credit_knowmore_no
+      title: No
+    text: Do you want to know more about the card?
+  utter_credit_surcharge:
+  - text: By using Lifestyle cards you can save on surcharges on fuel.
+  utter_credit_medical:
+  - text: Our lifestyle credit cards also provides medical benefits by partnering with healthcare and wellness professionals. The card also provides discounts on movie tickets.
+  utter_credit_want:
+  - buttons:
+    - payload: /credit_apply_yes
+      title: Yes
+    - payload: /credit_apply_no
+      title: No
+    text: Are you interested in applying?
+  utter_credit_docu:
+  - text: The following documents will be required to authorize your card- Copy of identity proof, Copy of address proof, PAN card copy, Two months salary slips or IT Returns, Duly signed in application, 1 passport size photograph
+  utter_credit_home:
+  - text: An employee from our bank will be coming for collecting the documents. When is the best time to come to your house?
+  utter_credit_hope:
+  - text: Thank you. We hope the card is useful
+  utter_issue_choose:
+  - buttons:
+    - payload: /issue_delay_pick
+      title: Delay in delivery
+    - payload: /issue_package_pick
+      title: Improper packaging
+    - payload: /issue_money_pick
+      title: Money not refunded
+    - payload: /issue_item_pick
+      title: Issue with item delivered
+    text: Hello Sir/ Madam. I am FlipBot. Please select the option relevant to your issue
+  utter_issue_num:
+  - text: Please enter your order number
+  utter_issue_res:
+  - text: Your order will be delivered within 3 business days
+  utter_issue_ask:
+  - buttons:
+    - payload: /issue_any_no
+      title: No
+    - payload: /issue_any_yes
+      title: Yes
+    text: Is there any other issue?
+  utter_issue_end:
+  - text: Okay. Have a good day
+  utter_issue_pack_desc:
+  - text: Please describe the issue with your packaged order
+  utter_issue_damage:
+  - buttons:
+    - payload: /issue_damage_yes
+      title: Yes
+    - payload: /issue_damage_no
+      title: No
+    text: Was the product damaged in any manner?
+  utter_issue_replace:
+  - buttons:
+    - payload: /issue_replace_yes
+      title: Yes
+    - payload: /issue_replace_no
+      title: No
+    text: Would you like to go for a repacement? The same product will be delivered to you and the damaged/wrong product will be collected back
+  utter_issue_days:
+  - text: Okay. Your order will be delivered within 5 business days
+  utter_issue_finance:
+  - text: Your issue will be passed onto the finance team and immediately looked into
+  utter_issue_delv_desc:
+  - text: Please describe the issue with your delivered order
+  utter_goodbye:
+  - text: Bye. Have a nice day.
+  utter_dues_notice:
+  - text: It has come to our notice that you havent paid your credit card dues yet
+  utter_dues_days:
+  - buttons:
+    - payload: /dues_inside_three
+      title: Within 3 days
+    - paylaod: /dues_outside_three
+      title: More than 3 days
+    text: How many days has it been since the due date?
+  utter_dues_within_three:
+  - text: Since its within 3 days, no late fees will be charged so i request you to please pay as soon as possible.
+  utter_dues_more_three:
+  - text: Since its already been over 3 days, interest would be charged. To keep your Credit Score high please consider paying dues timely.
+  utter_dues_reason:
+  - buttons:
+    - payload: /dues_reason_finance
+      title: Poor financial condition
+    - payload: /dues_reason_forgot
+      title: Forgot about it
+    text: May I Know the reason for the delay
+  utter_dues_financial:
+  - text: Make Sure to discuss your concern with your bank to find out an appropriate solution.There are alternative solutions like Personal loan  or other repayment mechanisms where you repay the outstanding amount as monthly EMIs.
+  utter_dues_forgot:
+  - text: Get in touch with your bank to pay off the outstanding bill amount immediately. You can also request the bank representative to reverse the late-fees. Banks try to reverse the late-fee charges for one-time delays.
+  utter_dues_end:
+  - text: Contact the branch for further help/ information.
+actions:
+- utter_feedback_find
+- utter_feedback_price
+- utter_feedback_impfeaturea
+- utter_feedback_experience
+- utter_feedback_recommend
+- utter_feedback_comeback
+- utter_feedback_rate
+- utter_feedback_end
+- utter_feedback_please
+- utter_credit_intro
+- utter_credit_tryout
+- utter_credit_thankyou
+- utter_credit_end
+- utter_credit_used
+- utter_credit_priority
+- utter_credit_priority_yes
+- utter_credit_priority_no
+- utter_credit_expend
+- utter_credit_surcharge
+- utter_credit_medical
+- utter_credit_want
+- utter_credit_docu
+- utter_credit_know_more
+- utter_credit_hope
+- utter_credit_home
+- utter_issue_choose
+- utter_issue_num
+- utter_issue_res
+- utter_issue_ask
+- utter_issue_end
+- utter_issue_pack_desc
+- utter_issue_damage
+- utter_issue_replace
+- utter_issue_days
+- utter_issue_finance
+- utter_issue_delv_desc
+- utter_goodbye
+- utter_dues_notice
+- utter_dues_days
+- utter_dues_within_three
+- utter_dues_more_three
+- utter_dues_reason
+- utter_dues_financial
+- utter_dues_forgot
+- utter_dues_end
+forms: {}
+e2e_actions: []

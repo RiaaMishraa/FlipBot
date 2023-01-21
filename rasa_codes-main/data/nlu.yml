@@ -1,0 +1,363 @@
+version: "2.0"
+nlu:
+- intent: credit_start_yes
+  examples: |
+    - Yes
+    - Yes I am
+    - yes i am a flipbank credit cardholder
+    - yes i have a flipbank credit card
+- intent: choose_credit
+  examples: |
+    - The voice bot conversing with a customer to sell a credit card
+- intent: choose_issue
+  examples: |
+    - A voice bot conversing with a customer to address a specific issue related to an ecommerce order
+- intent: credit_start_no
+  examples: |
+    - No
+    - No I am not
+    - no i am not a flipbank credit cardholder
+    - no i dont have any flipbank credit card
+- intent: credit_try_yes
+  examples: |
+    - Yes
+    - yes i want to
+    - yes i want to try it
+    - Yes I would love to
+    - i want to try it
+    - i want to
+- intent: credit_try_no
+  examples: |
+    - No
+    - i dont want to
+    - i do not want to try it
+    - i do not want to
+    - i dont want to try it
+    - No I do not want to
+- intent: credit_use_yes
+  examples: |
+    - Yes
+    - Yes I have
+    - i have used it
+    - yes used it
+    - yes i have used it
+- intent: credit_use_no
+  examples: |
+    - No I have not
+    - no
+    - i have not used it
+    - i havent used it
+    - i have never used it
+    - no i have not used it
+    - no i have never used it
+    - no i havent
+    - no i havent used it
+- intent: credit_prioritycustomer_answer_yes
+  examples: |
+    - Yes
+    - Yes I am
+    - yes i am a priority customer
+    - i am a priority customer
+- intent: credit_prioritycustomer_answer_no
+  examples: |
+    - No
+    - No I am not
+    - i am not a priority customer
+    - no i am not a priority customer
+- intent: credit_expenditure
+  examples: |
+    - I spend around 5000 rupees per month.
+    - around 7000 rupees a month
+    - around 6000 rupees
+    - i spend around 3000 rupees
+- intent: credit_house
+  examples: |
+    - 10 am day after tomorrow
+    - 10 am day after
+    - day after tomorrow at 10 am
+    - day after at 10 am
+- intent: credit_apply_yes
+  examples: |
+    - Yes
+    - yes i want to
+    - yes go ahead
+    - yes apply
+    - yes i want to apply for it
+- intent: credit_apply_no
+  examples: |
+    - No
+    - no i dont want to
+    - no i do not want to apply for it
+    - no i do not want to apply
+    - no i am not interested
+    - no thanks
+    - no i dont want to appy
+    - no i dont want to apply for it
+    - I am not interested right now
+- intent: credit_knowmore_yes
+  examples: |
+    - yes
+    - yes i want to
+    - yes i want to know more
+    - yes i want to know more about it
+    - yes tell me more about it
+    - yes tell me more
+- intent: credit_knowmore_no
+  examples: |
+    - no
+    - no i dont want to
+    - no i do not want to
+    - no i do not want to know more
+    - no i do not want to know more about it
+    - no i dont want to know more about it
+    - i dont want to
+- intent: choose_feedback
+  examples: |
+    - The voice bot conversing with a customer to gather user feedback on a specific topic
+- intent: voltage_start
+  examples: |
+    - start
+    - hi
+    - good morning
+    - good afternoon
+    - good evening
+    - begin
+    - hello
+- intent: feedback_findprod_yes
+  examples: |
+    - Yes i found it
+    - Yes
+    - yes i was able to find it
+    - yes i could find it
+    - I found it
+- intent: feedback_findprod_no
+  examples: |
+    - No
+    - no i could not find it
+    - no it was not there
+    - no it wasnt there
+    - i could not find it
+    - i couldnt find it
+    - i couldnt
+    - i could not
+    - I did not find it
+    - No i did not
+- intent: feedback_whichprod
+  examples: |
+    - a book
+    - perfume of rasasi brand
+    - merchandise of a band
+- intent: feedback_pri
+  examples: |
+    - yes
+    - yes they were
+    - they were
+    - no
+    - no they were not
+    - they were not
+    - they werent
+    - they were reasonable
+    - they were not reasonable
+- intent: feedback_impfeat
+  examples: |
+    - supercoins
+- intent: feedback_exp
+  examples: |
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+- intent: feedback_recommendation
+  examples: |
+    - most likely
+    - likely
+    - not likely
+- intent: feedback_back
+  examples: |
+    - For sure
+    - Maybe
+    - It was a mistake
+- intent: feedback_rating
+  examples: |
+    - Ya sure
+    - No I do not want to
+- intent: issue_delay_pick
+  examples: |
+    - delay in order
+- intent: issue_money_pick
+  examples: |
+    - money not refunded
+- intent: issue_package_pick
+  examples: |
+    - packaging not done right
+- intent: issue_item_pick
+  examples: |
+    - item not delivered
+- intent: issue_delay_number
+  examples: |
+    - delay order number is 678909876
+    - 678909876
+    - order number is 678909876
+    - number is 678909876
+    - delay number is 678909876
+- intent: issue_package_number
+  examples: |
+    - package order number is 678909876
+    - 678909876
+    - order number is 678909876
+    - number is 678909876
+- intent: issue_money_number
+  examples: |
+    - money order number is 678909876
+    - 678909876
+    - order number is 678909876
+    - number is 678909876
+    - money number is 678909876
+- intent: issue_item_number
+  examples: |
+    - item order number is 678909876
+    - 678909876
+    - order number is 678909876
+    - number is 678909876
+- intent: issue_response
+  examples: |
+    - ok
+    - okay
+    - all right
+    - fine
+    - okay fine
+    - okay no problem
+    - sure
+- intent: issue_any_yes
+  examples: |
+    - yes
+    - yes there are
+    - yes there is
+    - yes there are more issues
+- intent: issue_any_no
+  examples: |
+    - no
+    - none
+    - no other issue
+    - no, no other issue
+- intent: issue_damage_yes
+  examples: |
+    - yes
+    - yes it has been
+    - yes it was damaged
+    - yes it is damaged
+    - yes i has been damaged
+- intent: issue_damage_no
+  examples: |
+    - no
+    - no it is okay
+    - no it has not been
+    - no it hasnt been
+    - no it is not damaged
+    - no it was not damaged
+- intent: issue_replace_yes
+  examples: |
+    - yes
+    - yes i would
+    - yes replace it
+    - yes i would like to
+    - yes please
+    - yes i want to replace it
+- intent: issue_replace_no
+  examples: |
+    - no
+    - no i dont want to
+    - i dont want to
+    - no i dont
+    - no i dont want to replace it
+- intent: issue_package_desc
+  examples: |
+    - taping was not done properly
+    - no bubble wrap around delicate items
+    - the cardboard was torn in a few places
+- intent: issue_item_desc
+  examples: |
+    - the item sent had passed its expiry date
+    - cloth with defect was sent
+    - wrong product was sent
+    - the beads on the jewellery were missing
+    - the cap of the bottle was partly open
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - bye bye
+    - end
+    - stop
+    - enough
+- intent: dues_notpaid
+  examples: |
+    - Yes I am well aware about it
+    - ohh i did not know
+    - i was not aware about it
+    - Yes I know about it
+    - Yes I know
+    - ohh
+    - okay
+    - ohh okay
+    - yes i am well aware
+    - ohh i was not aware
+- intent: dues_three_sure
+  examples: |
+    - okay i will
+    - okay i will pay it
+    - i will pay it
+    - okay sure
+    - okay
+    - fine
+    - i will
+    - i will do it
+    - okay i will do it
+- intent: dues_inside_three
+  examples: |
+    - within three days
+    - it has been three days
+    - it has not been more than three days
+- intent: dues_outside_three
+  examples: |
+    - more than three days
+    - it has been more than three days
+    - it has crossed three days
+- intent: dues_more_sure
+  examples: |
+    - Okay I will
+    - Okay
+    - yes
+    - sure
+    - sure i will
+- intent: dues_reason_finance
+  examples: |
+    - I lost my job
+    - My financial condition is not that good
+    - I have some unpaid Emi's
+- intent: dues_reason_forgot
+  examples: |
+    - I forgot to pay
+    - i just forgot about it
+    - i forgot about it
+    - It just slipped out of my mind
+- intent: dues_finance
+  examples: |
+    - Okay
+    - okay i will
+    - sure
+    - sure i will
+    - okay got it
+    - Thank you
+- intent: dues_forget
+  examples: |
+    - Okay
+    - Thank you
+    - okay i will
+    - sure
+    - sure i will
+    - yes i will
+- intent: choose_dues
+  examples: |
+    - The voice bot conversing with a customer to check why the customer has not paid his credit card dues, and suggest suitable follow-up options

@@ -1,0 +1,7 @@
+To test the bot, rasa and rasa x must be installed
+Rasa installation guide - https://rasa.com/docs/rasa/installation/
+Rasa X installation guide - https://rasa.com/docs/rasa-x/installation-and-setup/installation-guide
+After installing rasa and rasa x, type rasa x in the command line. 
+The interface will be opened in the browser and the bot can be tested there.
+
+Sara installation guide - https://github.com/RasaHQ/rasa-demo

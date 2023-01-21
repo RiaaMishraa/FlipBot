@@ -1,0 +1,8 @@
+Team - High Voltage
+
+We are well aware that the topic was to create a voice bot...
+Rasa, the open source machine learning framework that we have used, has its own assistant called Sara.
+We wanted to use Sara to further add the voice part but weren't able to install it on either Mac, Windows or Linux.
+The code and video that we have submitted are for a ChatBot rather than a Voice bot.
+Thank you for giving us the opportunity to make something great.
+We are really grateful for this opportunity.

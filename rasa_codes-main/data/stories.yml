@@ -1,0 +1,698 @@
+version: "2.0"
+stories:
+
+- story: holder lscc
+  steps:
+    - intent: voltage_start
+    - action: utter_choose_case
+    - intent: choose_credit
+    - action: utter_credit_intro
+    - intent: credit_start_yes
+    - action: utter_credit_used
+    - intent: credit_use_yes
+    - action: utter_credit_end
+
+- story: holder try pc know more cardyes
+  steps:
+    - intent: voltage_start
+    - action: utter_choose_case
+    - intent: choose_credit
+    - action: utter_credit_intro
+    - intent: credit_start_yes
+    - action: utter_credit_used
+    - intent: credit_use_no
+    - action: utter_credit_tryout
+    - intent: credit_try_yes
+    - action: utter_credit_priority
+    - intent: credit_prioritycustomer_answer_yes
+    - action: utter_credit_priority_yes
+    - action: utter_credit_expend
+    - intent: credit_expenditure
+    - action: utter_credit_know_more
+    - intent: credit_knowmore_yes
+    - action: utter_credit_surcharge
+    - action: utter_credit_medical
+    - action: utter_credit_want
+    - intent: credit_apply_yes
+    - action: utter_credit_docu
+    - action: utter_credit_home
+    - intent: credit_house
+    - action: utter_credit_hope
+
+- story: holder try pc know more no cardyes
+  steps:
+    - intent: voltage_start
+    - action: utter_choose_case
+    - intent: choose_credit
+    - action: utter_credit_intro
+    - intent: credit_start_yes
+    - action: utter_credit_used
+    - intent: credit_use_no
+    - action: utter_credit_tryout
+    - intent: credit_try_yes
+    - action: utter_credit_priority
+    - intent: credit_prioritycustomer_answer_yes
+    - action: utter_credit_priority_yes
+    - action: utter_credit_expend
+    - intent: credit_expenditure
+    - action: utter_credit_know_more
+    - intent: credit_knowmore_no
+    - action: utter_credit_want
+    - intent: credit_apply_yes
+    - action: utter_credit_docu
+    - action: utter_credit_home
+    - intent: credit_house
+    - action: utter_credit_hope
+
+- story: holder try pc know more cardno
+  steps:
+    - intent: voltage_start
+    - action: utter_choose_case
+    - intent: choose_credit
+    - action: utter_credit_intro
+    - intent: credit_start_yes
+    - action: utter_credit_used
+    - intent: credit_use_no
+    - action: utter_credit_tryout
+    - intent: credit_try_yes
+    - action: utter_credit_priority
+    - intent: credit_prioritycustomer_answer_yes
+    - action: utter_credit_priority_yes
+    - action: utter_credit_expend
+    - intent: credit_expenditure
+    - action: utter_credit_know_more
+    - intent: credit_knowmore_yes
+    - action: utter_credit_surcharge
+    - action: utter_credit_medical
+    - action: utter_credit_want
+    - intent: credit_apply_no
+    - action: utter_credit_thankyou
+
+- story: holder try pc know more no cardno
+  steps:
+    - intent: voltage_start
+    - action: utter_choose_case
+    - intent: choose_credit
+    - action: utter_credit_intro
+    - intent: credit_start_yes
+    - action: utter_credit_used
+    - intent: credit_use_no
+    - action: utter_credit_tryout
+    - intent: credit_try_yes
+    - action: utter_credit_priority
+    - intent: credit_prioritycustomer_answer_yes
+    - action: utter_credit_priority_yes
+    - action: utter_credit_expend
+    - intent: credit_expenditure
+    - action: utter_credit_know_more
+    - intent: credit_knowmore_no
+    - action: utter_credit_want
+    - intent: credit_apply_no
+    - action: utter_credit_thankyou
+
+- story: holder try pcno know more cardyes
+  steps:
+    - intent: voltage_start
+    - action: utter_choose_case
+    - intent: choose_credit
+    - action: utter_credit_intro
+    - intent: credit_start_yes
+    - action: utter_credit_used
+    - intent: credit_use_no
+    - action: utter_credit_tryout
+    - intent: credit_try_yes
+    - action: utter_credit_priority
+    - intent: credit_prioritycustomer_answer_no
+    - action: utter_credit_priority_no
+    - action: utter_credit_expend
+    - intent: credit_expenditure
+    - action: utter_credit_know_more
+    - intent: credit_knowmore_yes
+    - action: utter_credit_surcharge
+    - action: utter_credit_medical
+    - action: utter_credit_want
+    - intent: credit_apply_yes
+    - action: utter_credit_docu
+    - action: utter_credit_home
+    - intent: credit_house
+    - action: utter_credit_hope
+
+- story: holder try pcno know more no cardyes
+  steps:
+    - intent: voltage_start
+    - action: utter_choose_case
+    - intent: choose_credit
+    - action: utter_credit_intro
+    - intent: credit_start_yes
+    - action: utter_credit_used
+    - intent: credit_use_no
+    - action: utter_credit_tryout
+    - intent: credit_try_yes
+    - action: utter_credit_priority
+    - intent: credit_prioritycustomer_answer_no
+    - action: utter_credit_priority_no
+    - action: utter_credit_expend
+    - intent: credit_expenditure
+    - action: utter_credit_know_more
+    - intent: credit_knowmore_no
+    - action: utter_credit_want
+    - intent: credit_apply_yes
+    - action: utter_credit_docu
+    - action: utter_credit_home
+    - intent: credit_house
+    - action: utter_credit_hope
+
+- story: holder try pcno know more cardno
+  steps:
+    - intent: voltage_start
+    - action: utter_choose_case
+    - intent: choose_credit
+    - action: utter_credit_intro
+    - intent: credit_start_yes
+    - action: utter_credit_used
+    - intent: credit_use_no
+    - action: utter_credit_tryout
+    - intent: credit_try_yes
+    - action: utter_credit_priority
+    - intent: credit_prioritycustomer_answer_no
+    - action: utter_credit_priority_no
+    - action: utter_credit_expend
+    - intent: credit_expenditure
+    - action: utter_credit_know_more
+    - intent: credit_knowmore_yes
+    - action: utter_credit_surcharge
+    - action: utter_credit_medical
+    - action: utter_credit_want
+    - intent: credit_apply_no
+    - action: utter_credit_thankyou
+
+- story: holder try pcno know more no cardno
+  steps:
+    - intent: voltage_start
+    - action: utter_choose_case
+    - intent: choose_credit
+    - action: utter_credit_intro
+    - intent: credit_start_yes
+    - action: utter_credit_used
+    - intent: credit_use_no
+    - action: utter_credit_tryout
+    - intent: credit_try_yes
+    - action: utter_credit_priority
+    - intent: credit_prioritycustomer_answer_no
+    - action: utter_credit_priority_no
+    - action: utter_credit_expend
+    - intent: credit_expenditure
+    - action: utter_credit_know_more
+    - intent: credit_knowmore_no
+    - action: utter_credit_surcharge
+    - action: utter_credit_medical
+    - action: utter_credit_want
+    - intent: credit_apply_no
+    - action: utter_credit_thankyou
+
+- story: holder no try pcno know more cardyes
+  steps:
+    - intent: voltage_start
+    - action: utter_choose_case
+    - intent: choose_credit
+    - action: utter_credit_intro
+    - intent: credit_start_no
+    - action: utter_credit_tryout
+    - intent: credit_try_yes
+    - action: utter_credit_priority_no
+    - action: utter_credit_expend
+    - intent: credit_expenditure
+    - action: utter_credit_know_more
+    - intent: credit_knowmore_yes
+    - action: utter_credit_surcharge
+    - action: utter_credit_medical
+    - action: utter_credit_want
+    - intent: credit_apply_yes
+    - action: utter_credit_docu
+    - action: utter_credit_home
+    - intent: credit_house
+    - action: utter_credit_hope
+
+- story: holder no try pcno know more no cardyes
+  steps:
+    - intent: voltage_start
+    - action: utter_choose_case
+    - intent: choose_credit
+    - action: utter_credit_intro
+    - intent: credit_start_no
+    - action: utter_credit_tryout
+    - intent: credit_try_yes
+    - action: utter_credit_priority_no
+    - action: utter_credit_expend
+    - intent: credit_expenditure
+    - action: utter_credit_know_more
+    - intent: credit_knowmore_no
+    - action: utter_credit_want
+    - intent: credit_apply_yes
+    - action: utter_credit_docu
+    - action: utter_credit_home
+    - intent: credit_house
+    - action: utter_credit_hope
+
+- story: holder no try pcno know more cardno
+  steps:
+    - intent: voltage_start
+    - action: utter_choose_case
+    - intent: choose_credit
+    - action: utter_credit_intro
+    - intent: credit_start_no
+    - action: utter_credit_tryout
+    - intent: credit_try_yes
+    - action: utter_credit_priority_no
+    - action: utter_credit_expend
+    - intent: credit_expenditure
+    - action: utter_credit_know_more
+    - intent: credit_knowmore_yes
+    - action: utter_credit_surcharge
+    - action: utter_credit_medical
+    - action: utter_credit_want
+    - intent: credit_apply_no
+    - action: utter_credit_thankyou
+
+- story: holder no try pcno know more no cardno
+  steps:
+    - intent: voltage_start
+    - action: utter_choose_case
+    - intent: choose_credit
+    - action: utter_credit_intro
+    - intent: credit_start_no
+    - action: utter_credit_tryout
+    - intent: credit_try_yes
+    - action: utter_credit_priority_no
+    - action: utter_credit_expend
+    - intent: credit_expenditure
+    - action: utter_credit_know_more
+    - intent: credit_knowmore_no
+    - action: utter_credit_want
+    - intent: credit_apply_no
+    - action: utter_credit_thankyou
+
+- story: holder lscc no try no
+  steps:
+    - intent: voltage_start
+    - action: utter_choose_case
+    - intent: choose_credit
+    - action: utter_credit_intro
+    - intent: credit_start_yes
+    - action: utter_credit_used
+    - intent: credit_use_no
+    - action: utter_credit_tryout
+    - intent: credit_try_no
+    - action: utter_credit_thankyou
+
+- story: holder lscc no try pc know more no cardyes
+  steps:
+    - intent: voltage_start
+    - action: utter_choose_case
+    - intent: choose_credit
+    - action: utter_credit_intro
+    - intent: credit_start_yes
+    - action: utter_credit_used
+    - intent: credit_use_no
+    - action: utter_credit_tryout
+    - intent: credit_try_yes
+    - action: utter_credit_priority
+    - intent: credit_prioritycustomer_answer_yes
+    - action: utter_credit_priority_yes
+    - action: utter_credit_expend
+    - intent: credit_expenditure
+    - action: utter_credit_know_more
+    - intent: credit_knowmore_no
+    - action: utter_credit_want
+    - intent: credit_apply_yes
+    - action: utter_credit_docu
+    - action: utter_credit_home
+    - intent: credit_house
+    - action: utter_credit_hope
+
+- story: found it
+  steps:
+    - intent: voltage_start
+    - action: utter_choose_case
+    - intent: choose_feedback
+    - action: utter_feedback_please
+    - action: utter_feedback_find
+    - intent: feedback_findprod_yes
+    - action: utter_feedback_price
+    - intent: feedback_pri
+    - action: utter_feedback_impfeature
+    - intent: feedback_impfeat
+    - action: utter_feedback_experience
+    - intent: feedback_exp
+    - action: utter_feedback_recommend
+    - intent: feedback_recommendation
+    - action: utter_feedback_comeback
+    - intent: feedback_back
+    - action: utter_feedback_rate
+    - intent: feedback_rating
+    - action: utter_feedback_end
+
+
+- story: did not find it
+  steps:
+    - intent: voltage_start
+    - action: utter_choose_case
+    - intent: choose_feedback
+    - action: utter_feedback_please
+    - action: utter_feedback_find
+    - intent: feedback_findprod_no
+    - action: utter_feedback_whichproduct
+    - intent: feedback_whichprod
+    - action: utter_feedback_price
+    - intent: feedback_pri
+    - action: utter_feedback_impfeature
+    - intent: feedback_impfeat
+    - action: utter_feedback_experience
+    - intent: feedback_exp
+    - action: utter_feedback_recommend
+    - intent: feedback_recommendation
+    - action: utter_feedback_comeback
+    - intent: feedback_back
+    - action: utter_feedback_rate
+    - intent: feedback_rating
+    - action: utter_feedback_end
+
+- story: delay in delivery
+  steps:
+    - intent: voltage_start
+    - action: utter_choose_case
+    - intent: choose_issue
+    - action: utter_issue_choose
+    - intent: issue_delay_pick
+    - action: utter_issue_num
+    - intent: issue_delay_number
+    - action: utter_issue_res
+    - intent: issue_response
+    - action: utter_issue_ask
+    - intent: issue_any_no
+    - action: utter_issue_end
+
+- story: delay in delivery other yes
+  steps:
+    - intent: voltage_start
+    - action: utter_choose_case
+    - intent: choose_issue
+    - action: utter_issue_choose
+    - intent: issue_delay_pick
+    - action: utter_issue_num
+    - intent: issue_delay_number
+    - action: utter_issue_res
+    - intent: issue_response
+    - action: utter_issue_ask
+    - intent: issue_any_yes
+    - action: utter_issue_choose
+
+- story: improper packaging damage replace
+  steps:
+    - intent: voltage_start
+    - action: utter_choose_case
+    - intent: choose_issue
+    - action: utter_issue_choose
+    - intent: issue_package_pick
+    - action: utter_issue_num
+    - intent: issue_package_number
+    - action: utter_issue_pack_desc
+    - intent: issue_package_desc
+    - action: utter_issue_damage
+    - intent: issue_damage_yes
+    - action: utter_issue_replace
+    - intent: issue_replace_yes
+    - action: utter_issue_days
+    - intent: issue_response
+    - action: utter_issue_ask
+    - intent: issue_any_no
+    - action: utter_issue_end
+
+- story: improper packaging damage replace other yes
+  steps:
+    - intent: voltage_start
+    - action: utter_choose_case
+    - intent: choose_issue
+    - action: utter_issue_choose
+    - intent: issue_package_pick
+    - action: utter_issue_num
+    - intent: issue_package_number
+    - action: utter_issue_pack_desc
+    - intent: issue_package_desc
+    - action: utter_issue_damage
+    - intent: issue_damage_yes
+    - action: utter_issue_replace
+    - intent: issue_replace_yes
+    - action: utter_issue_days
+    - intent: issue_response
+    - action: utter_issue_ask
+    - intent: issue_any_yes
+    - action: utter_issue_choose
+
+- story: improper packaging damage no replace no
+  steps:
+    - intent: voltage_start
+    - action: utter_choose_case
+    - intent: choose_issue
+    - action: utter_issue_choose
+    - intent: issue_package_pick
+    - action: utter_issue_num
+    - intent: issue_package_number
+    - action: utter_issue_pack_desc
+    - intent: issue_package_desc
+    - action: utter_issue_damage
+    - intent: issue_damage_no
+    - action: utter_issue_replace
+    - intent: issue_replace_no
+    - action: utter_issue_ask
+    - intent: issue_any_no
+    - action: utter_issue_end
+
+- story: improper packaging damage no replace no other yes
+  steps:
+    - intent: voltage_start
+    - action: utter_choose_case
+    - intent: choose_issue
+    - action: utter_issue_choose
+    - intent: issue_package_pick
+    - action: utter_issue_num
+    - intent: issue_package_number
+    - action: utter_issue_pack_desc
+    - intent: issue_package_desc
+    - action: utter_issue_damage
+    - intent: issue_damage_no
+    - action: utter_issue_replace
+    - intent: issue_replace_no
+    - action: utter_issue_ask
+    - intent: issue_any_yes
+    - action: utter_issue_choose
+
+- story: improper packaging damage replace no
+  steps:
+    - intent: voltage_start
+    - action: utter_choose_case
+    - intent: choose_issue
+    - action: utter_issue_choose
+    - intent: issue_package_pick
+    - action: utter_issue_num
+    - intent: issue_package_number
+    - action: utter_issue_pack_desc
+    - intent: issue_package_desc
+    - action: utter_issue_damage
+    - intent: issue_damage_yes
+    - action: utter_issue_replace
+    - intent: issue_replace_no
+    - action: utter_issue_ask
+    - intent: issue_any_no
+    - action: utter_issue_end
+
+    - action: utter_issue_end
+
+- story: improper packaging damage replace no other yes
+  steps:
+    - intent: voltage_start
+    - action: utter_choose_case
+    - intent: choose_issue
+    - action: utter_issue_choose
+    - intent: issue_package_pick
+    - action: utter_issue_num
+    - intent: issue_package_number
+    - action: utter_issue_pack_desc
+    - intent: issue_package_desc
+    - action: utter_issue_damage
+    - intent: issue_damage_yes
+    - action: utter_issue_replace
+    - intent: issue_replace_no
+    - action: utter_issue_ask
+    - intent: issue_any_yes
+    - action: utter_issue_choose
+
+- story: money not refunded
+  steps:
+    - intent: voltage_start
+    - action: utter_choose_case
+    - intent: choose_issue
+    - action: utter_issue_choose
+    - intent: issue_money_pick
+    - action: utter_issue_num
+    - intent: issue_money_number
+    - action: utter_issue_finance
+    - intent: issue_response
+    - action: utter_issue_ask
+    - intent: issue_any_no
+    - action: utter_issue_end
+
+- story: money not refunded other yes
+  steps:
+    - intent: voltage_start
+    - action: utter_choose_case
+    - intent: choose_issue
+    - action: utter_issue_choose
+    - intent: issue_money_pick
+    - action: utter_issue_num
+    - intent: issue_money_number
+    - action: utter_issue_finance
+    - intent: issue_response
+    - action: utter_issue_ask
+    - intent: issue_any_yes
+    - action: utter_issue_choose
+
+- story: issue with item delivered replace
+  steps:
+    - intent: voltage_start
+    - action: utter_choose_case
+    - intent: choose_issue
+    - action: utter_issue_choose
+    - intent: issue_item_pick
+    - action: utter_issue_num
+    - intent: issue_item_number
+    - action: utter_issue_delv_desc
+    - intent: issue_item_desc
+    - action: utter_issue_replace
+    - intent: issue_replace_yes
+    - action: utter_issue_days
+    - intent: issue_response
+    - action: utter_issue_ask
+    - intent: issue_any_no
+    - action: utter_issue_end
+
+- story: issue with item delivered replace other yes
+  steps:
+    - intent: voltage_start
+    - action: utter_choose_case
+    - intent: choose_issue
+    - action: utter_issue_choose
+    - intent: issue_item_pick
+    - action: utter_issue_num
+    - intent: issue_item_number
+    - action: utter_issue_delv_desc
+    - intent: issue_item_desc
+    - action: utter_issue_replace
+    - intent: issue_replace_yes
+    - action: utter_issue_days
+    - intent: issue_response
+    - action: utter_issue_ask
+    - intent: issue_any_yes
+    - action: utter_issue_choose
+
+- story: issue with item delivered replace no
+  steps:
+    - intent: voltage_start
+    - action: utter_choose_case
+    - intent: choose_issue
+    - action: utter_issue_choose
+    - intent: issue_delay_pick
+    - action: utter_issue_num
+    - intent: issue_item_number
+    - action: utter_issue_delv_desc
+    - intent: issue_item_desc
+    - action: utter_issue_replace
+    - intent: issue_replace_no
+    - action: utter_issue_ask
+    - intent: issue_any_no
+    - action: utter_issue_end
+
+- story: issue with item delivered replace no other yes
+  steps:
+    - intent: voltage_start
+    - action: utter_choose_case
+    - intent: choose_issue
+    - action: utter_issue_choose
+    - intent: issue_delay_pick
+    - action: utter_issue_num
+    - intent: issue_item_number
+    - action: utter_issue_delv_desc
+    - intent: issue_item_desc
+    - action: utter_issue_replace
+    - intent: issue_replace_no
+    - action: utter_issue_ask
+    - intent: issue_any_yes
+    - action: utter_issue_choose
+
+- story: within 3 days finance
+  steps:
+    - intent: voltage_start
+    - action: utter_choose_case
+    - intent: choose_dues
+    - action: utter_dues_notice
+    - intent: dues_notpaid
+    - action: utter_dues_days
+    - intent: dues_inside_three
+    - action: utter_dues_within_three
+    - intent: dues_three_sure
+    - action: utter_dues_reason
+    - intent: dues_reason_finance
+    - action: utter_dues_financial
+    - intent: dues_finance
+    - action: utter_dues_end
+
+- story: within 3 days forgot
+  steps:
+    - intent: voltage_start
+    - action: utter_choose_case
+    - intent: choose_dues
+    - action: utter_dues_notice
+    - intent: dues_notpaid
+    - action: utter_dues_days
+    - intent: dues_inside_three
+    - action: utter_dues_within_three
+    - intent: dues_three_sure
+    - action: utter_dues_reason
+    - intent: dues_reason_forgot
+    - action: utter_dues_forgot
+    - intent: dues_forget
+    - action: utter_dues_end
+
+- story: more than 3 days forgot
+  steps:
+    - intent: voltage_start
+    - action: utter_choose_case
+    - intent: choose_dues
+    - action: utter_dues_notice
+    - intent: dues_notpaid
+    - action: utter_dues_days
+    - intent: dues_outside_three
+    - action: utter_dues_more_three
+    - intent: dues_more_sure
+    - action: utter_dues_reason
+    - intent: dues_reason_forgot
+    - action: utter_dues_forgot
+    - intent: dues_forget
+    - action: utter_dues_end
+
+- story: more than 3 days finance
+  steps:
+    - intent: voltage_start
+    - action: utter_choose_case
+    - intent: choose_dues
+    - action: utter_dues_notice
+    - intent: dues_notpaid
+    - action: utter_dues_days
+    - intent: dues_outside_three
+    - action: utter_dues_more_three
+    - intent: dues_more_sure
+    - action: utter_dues_reason
+    - intent: dues_reason_finance
+    - action: utter_dues_financial
+    - intent: dues_finance
+    - action: utter_dues_end
